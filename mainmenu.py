@@ -8,23 +8,6 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import pymysql
-
-def koneksi(self):
-    con = pymysql.connect(db='toko', user='root', passwd='1', host='localhost', port=3306, autocommit=True)
-    cur = con.cursor()
-    if(cur):
-        self.messagebox("Koneksi", "Koneksi Berhasil")
-    else:
-        self.messagebox("Koneksi", "Koneksi Gagal")
-
-def messagebox(self, title, message):
-    mess = QtWidgets.QMessageBox()
-    mess.setWindowTitle(title)
-    mess.setText(message)
-    mess.setStandardButtons(QtWidgets.QMessageBox.Ok)
-    mess.exec_()
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
